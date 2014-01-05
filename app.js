@@ -15,3 +15,9 @@ app.use(express.static(__dirname + './dist'));
 server.listen(app.get('port'), function() {
     console.log('Express server listening on port' + app.get('port'));
 });
+
+io.sockets.on('connection', function() {
+    console.log('connected');
+});
+
+

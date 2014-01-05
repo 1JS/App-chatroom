@@ -12,6 +12,7 @@
     "angular-animate": "~1.2.0",
     "font-awesome": "~4.0.3",
     "toastr": "~2.0.1",
-    "underscore": "~1.5.2"
+    "underscore": "~1.5.2",
+    "socket.io-client": "~0.9.16"
   }
 }

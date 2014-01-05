@@ -15,6 +15,7 @@ angular.module('app', [
             .when(
                 '/'
                 templateUrl: 'views/main.html'
+                controller: 'chatroom'
             )
 
             .otherwise(
