@@ -16,8 +16,17 @@ server.listen(app.get('port'), function() {
     console.log('Express server listening on port' + app.get('port'));
 });
 
-io.sockets.on('connection', function() {
+io.sockets.on('connection', function(client) {
     console.log('connected');
+
+    client.on('messages', function(data) {
+        // console.log(data);
+        client.broadcast.emit('messages', data)
+    });
+
+    client.on('join', function(name) {
+        client.set('nickname', name);
+    });
 });
 
 

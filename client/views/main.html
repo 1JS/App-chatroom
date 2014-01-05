@@ -9,6 +9,16 @@
         </div>
 
         <div class="col-sm-10">
+            <section class="messages-container">
+                <ul class="list-unstyled">
+                    <li data-ng-repeat="message in messages">
+                        <span data-ng-class="{self: message.sender === chat.user, admin: message.sender === 'Admin'}">{{message.sender || 'Anon'}}</span>
+                        : 
+                        <span>{{message.content}}</span>
+                    </li>
+                </ul>
+            </section>
+
             <form class="chat-form" data-ng-submit="sendMessage(chat)">
                 <input type="text"
                        class="form-control"
